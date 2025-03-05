@@ -6,7 +6,7 @@ void main() {
 
   stdout.write("Введите номер дня недели: ");
   var name = stdin.readLineSync();
-  stdout.write(name);
+  stdout.write(name)ж
   //runApp(const MyApp());
 }
 
