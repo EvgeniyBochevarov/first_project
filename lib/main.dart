@@ -1,7 +1,13 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+
+  stdout.write("Введите номер дня недели: ");
+  var name = stdin.readLineSync();
+  stdout.write(name);
+  //runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -104,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(''),
+            const Text('Привет "в кавычках"'),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
