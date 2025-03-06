@@ -4,9 +4,26 @@ import 'package:flutter/material.dart';
 
 void main() {
 
-  stdout.write("Введите номер дня недели: ");
-  var name = stdin.readLineSync();
-  stdout.write(name)ж
+  stdout.write("Введіть номер дня тижня: ");
+  var nomerday = stdin.readLineSync();
+  stdout.write(nomerday);
+  if (nomerday < 1 && nomerday > 7) {
+    print("Це число не є номером дня тижня");
+  } else if (nomerday = 1) {
+    print('Понеділок');
+  } else if (nomerday = 2) {
+   print('Вівторок');
+  } else if (nomerday = 3) {
+    print('Середа');
+  } else if (nomerday = 4) {
+    print('Четвер');
+  } else if (nomerday = 5) {
+    print("П'ятниця");
+  } else if (nomerday = 6) {
+   print('Субота');
+  } else if (nomerday = 7) {
+    print('Неділя');
+  }
   //runApp(const MyApp());
 }
 
