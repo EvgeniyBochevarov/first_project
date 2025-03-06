@@ -5,12 +5,17 @@ void main() {
   print('Гра Вгадай Число');
   var zagadal = Random().nextInt(100) + 1;
 
-  var otvet = 0;
+  var otvet;
+
   while (otvet != zagadal) {
     stdout.write("Введіть число: ");
-    otvet = int.parse(stdin.readLineSync()!);
 
-    if (otvet < zagadal) {
+    String? textvvod = stdin.readLineSync();
+    var textvvod1 = textvvod as String;
+    otvet = num.tryParse(textvvod1);
+    if (otvet == null) {
+      print('Це не є число, введіть заново');
+    } else if (otvet < zagadal) {
       print('Не вгадав. Загадане більше число');
     } else if (otvet > zagadal) {
       print('Не вгадав. Загадане менше число');
