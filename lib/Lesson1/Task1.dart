@@ -3,8 +3,12 @@ import 'dart:io';
 void main() {
 
   stdout.write("Введіть номер дня тижня: ");
-  var number = int.parse(stdin.readLineSync()!);
-    if (number < 1 || number > 7) {
+  String? textvvod = stdin.readLineSync();
+  var textvvod1 = textvvod as String;
+  var number = num.tryParse(textvvod1);
+    if (number == null) {
+      print('Це не є число');
+    } else if (number < 1 || number > 7) {
       print("Це число не є номером дня тижня");
     } else if (number == 1) {
       print('Понеділок');
