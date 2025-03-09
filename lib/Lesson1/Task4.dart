@@ -14,23 +14,31 @@ void main() {
     4. Мінути в секунди''';
     print(textV);
     int? choice = int.tryParse(stdin.readLineSync()!);
+    final message = switch (choice) {
+      1 => 'Результат: ${hoursToMinutes(vrem)} хвилин',
+      2 => 'Результат: ${hoursToSeconds(vrem)} секунд',
+      3 => 'Результат: ${minutesToHours(vrem)} годин',
+      4 => 'Результат: ${minutesToSeconds(vrem)} секунд',
+      _ => 'Невірний вибір. Спробуйте знову.',
+    };
 
-    switch (choice) {
-      case 1:
-        print('Результат: ${hoursToMinutes(vrem)} хвилин');
-        break;
-      case 2:
-        print('Результат: ${hoursToSeconds(vrem)} секунд');
-        break;
-      case 3:
-        print('Результат: ${minutesToHours(vrem)} годин');
-        break;
-      case 4:
-        print('Результат: ${minutesToSeconds(vrem)} секунд');
-        break;
-      default:
-        print('Невірний вибір. Спробуйте знову.');
-    }
+    print(message);
+    // switch (choice) {
+    //   case 1:
+    //     print('Результат: ${hoursToMinutes(vrem)} хвилин');
+    //     break;
+    //   case 2:
+    //     print('Результат: ${hoursToSeconds(vrem)} секунд');
+    //     break;
+    //   case 3:
+    //     print('Результат: ${minutesToHours(vrem)} годин');
+    //     break;
+    //   case 4:
+    //     print('Результат: ${minutesToSeconds(vrem)} секунд');
+    //     break;
+    //   default:
+    //     print('Невірний вибір. Спробуйте знову.');
+    // }
   } else {
     print('Введіть корректне число.');
   }
