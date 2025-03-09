@@ -9,24 +9,28 @@ void main() {
   double? shislo2 = double.tryParse(stdin.readLineSync()!);
   print('Оберіть операцію (+, -, *, /)');
   String? oper = stdin.readLineSync()!;
-
-  switch (oper) {
-    case '+':
-      print('Результат: $shislo1 $oper $shislo2 = ${add(shislo1!, shislo2!)}');
-      break;
-    case '-':
-      print('Результат: $shislo1 $oper $shislo2 = ${subtract(shislo1!, shislo2!)}');
-      break;
-    case '*':
-      print('Результат: $shislo1 $oper $shislo2 = ${multiply(shislo1!, shislo2!)}');
-      break;
-    case '/':
-      print('Результат: $shislo1 $oper $shislo2 = ${divide(shislo1!, shislo2!)}');
-      break;
-    default:
-      print('Невірна операція. Спробуйте знову.');
+  if (shislo1 != null || shislo2 != null) {
+    switch (oper) {
+      case '+':
+        print(
+            'Результат: $shislo1 $oper $shislo2 = ${add(shislo1!, shislo2!)}');
+        break;
+      case '-':
+        print('Результат: $shislo1 $oper $shislo2 = ${subtract(
+            shislo1!, shislo2!)}');
+        break;
+      case '*':
+        print('Результат: $shislo1 $oper $shislo2 = ${multiply(
+            shislo1!, shislo2!)}');
+        break;
+      case '/':
+        print('Результат: $shislo1 $oper $shislo2 = ${divide(
+            shislo1!, shislo2!)}');
+        break;
+      default:
+        print('Невірна операція. Спробуйте знову.');
+    }
   }
-
 
 }
 
