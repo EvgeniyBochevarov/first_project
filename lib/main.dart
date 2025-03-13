@@ -3,28 +3,29 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 
 void main() {
-
   stdout.write("Введіть номер дня тижня: ");
-  var nomerday = stdin.readLineSync();
-  stdout.write(nomerday);
-  if (nomerday < 1 && nomerday > 7) {
+  String? textvvod = stdin.readLineSync();
+  var textvvod1 = textvvod as String;
+  var number = num.tryParse(textvvod1);
+  if (number == null) {
+    print('Це не є число');
+  } else if (number < 1 || number > 7) {
     print("Це число не є номером дня тижня");
-  } else if (nomerday = 1) {
+  } else if (number == 1) {
     print('Понеділок');
-  } else if (nomerday = 2) {
-   print('Вівторок');
-  } else if (nomerday = 3) {
+  } else if (number == 2) {
+    print('Вівторок');
+  } else if (number == 3) {
     print('Середа');
-  } else if (nomerday = 4) {
+  } else if (number == 4) {
     print('Четвер');
-  } else if (nomerday = 5) {
+  } else if (number == 5) {
     print("П'ятниця");
-  } else if (nomerday = 6) {
-   print('Субота');
-  } else if (nomerday = 7) {
+  } else if (number == 6) {
+    print('Субота');
+  } else if (number == 7) {
     print('Неділя');
   }
-  //runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
