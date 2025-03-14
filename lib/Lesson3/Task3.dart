@@ -1,8 +1,7 @@
 
 mixin Playing {
   void play() {
-    print('Играет музыка');
-  }
+      }
 }
 
 class Piano with Playing {
