@@ -1,8 +1,8 @@
 import 'package:equatable/equatable.dart';
 
 class Rectangle {
-  double width;
-  double height;
+  final double width;
+  final double height;
 
   Rectangle(this.width, this.height);
 
@@ -12,20 +12,20 @@ class Rectangle {
   }
 
   @override
-  bool operator == (Object other) =>
-  identical(this, other) ||
-  other is Rectangle &&
-  runtimeType == other.runtimeType &&
-  width == other.width &&
-  height == other.height;
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is Rectangle &&
+          runtimeType == other.runtimeType &&
+          width == other.width &&
+          height == other.height;
 
   @override
   int get hashCode => width.hashCode ^ height.hashCode;
 }
 
 class Rectangle2 extends Equatable {
-  double width;
-  double height;
+  final double width;
+  final double height;
 
   Rectangle2(this.width, this.height);
 
@@ -37,7 +37,6 @@ class Rectangle2 extends Equatable {
     return 'Rectangle2(width: $width, height: $height)';
   }
 }
-
 
 void main() {
   Rectangle rect1 = Rectangle(7.0, 11.0);

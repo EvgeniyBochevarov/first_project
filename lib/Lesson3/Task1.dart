@@ -7,17 +7,16 @@ void main() {
 
   Student student_3 = Student('Наталья', 4, 'Педагогика');
   student_3.infostuden();
-
 }
 
 class Student {
-  String studentImy;
-  int kyrs;
-  String specialn;
+  final String studentName;
+  final int course;
+  final String specialn;
 
-  Student(this.studentImy, this.kyrs, this.specialn);
+  Student(this.studentName, this.course, this.specialn);
 
   void infostuden() {
-    print('Имя: $studentImy Курс: $kyrs Специальность: $specialn');
+    print('Имя: $studentName Курс: $course Специальность: $specialn');
   }
 }

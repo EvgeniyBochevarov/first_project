@@ -7,7 +7,6 @@ void main() {
 
   Animal an3 = Animal.imenov(vid: 'Птица', vozrast: 5);
   an3.dorosla();
-
 }
 
 class Animal {
@@ -15,6 +14,7 @@ class Animal {
   int vozrast;
 
   Animal(this.vid, this.vozrast);
+
   Animal.imenov({required this.vid, this.vozrast = 0});
 
   void dorosla() {
@@ -22,7 +22,6 @@ class Animal {
       print('Животное: $vid Взрослое');
     } else {
       print('Животное: $vid Новорожденное');
-
     }
   }
 }

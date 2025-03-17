@@ -1,6 +1,5 @@
-
 abstract class Playable {
-  void play() {}
+  void play();
 }
 
 class Soccer implements Playable {
@@ -18,11 +17,9 @@ class Basketball implements Playable {
 }
 
 class SportsClub {
-
-  void addSport(Playable) {
-    Playable.play();
+  void addSport(Playable playble) {
+    playble.play();
   }
-
 }
 
 void main() {
@@ -33,5 +30,3 @@ void main() {
   club.addSport(soccer);
   club.addSport(basketball);
 }
-
-

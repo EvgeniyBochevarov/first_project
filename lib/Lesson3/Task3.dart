@@ -1,25 +1,16 @@
-
 mixin Playing {
-  void play() {
-      }
-}
-
-class Piano with Playing {
-  void play() {
-    print('Играет пиано');
+  void play(String namePlay) {
+    print('Играет $namePlay');
   }
 }
 
-class Guitar with Playing {
-  void play() {
-    print('Играет гитара');
-  }
-}
+class Piano with Playing {}
+
+class Guitar with Playing {}
 
 void main() {
   Piano piano = Piano();
   Guitar guitar = Guitar();
-  piano.play();
-  guitar.play();
-
+  piano.play('Пианино');
+  guitar.play('Гитара');
 }
