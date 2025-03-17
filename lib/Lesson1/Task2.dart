@@ -20,6 +20,6 @@ void main() {
     } else if (otvet > zagadal) {
       print('Не вгадав. Загадане менше число');
     }
-   }
-   print('Перемога!!! Загадане число: $zagadal');
+  }
+  print('Перемога!!! Загадане число: $zagadal');
 }

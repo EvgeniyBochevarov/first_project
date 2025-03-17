@@ -23,23 +23,7 @@ void main() {
     };
 
     print(message);
-    // switch (choice) {
-    //   case 1:
-    //     print('Результат: ${hoursToMinutes(vrem)} хвилин');
-    //     break;
-    //   case 2:
-    //     print('Результат: ${hoursToSeconds(vrem)} секунд');
-    //     break;
-    //   case 3:
-    //     print('Результат: ${minutesToHours(vrem)} годин');
-    //     break;
-    //   case 4:
-    //     print('Результат: ${minutesToSeconds(vrem)} секунд');
-    //     break;
-    //   default:
-    //     print('Невірний вибір. Спробуйте знову.');
-    // }
-  } else {
+   } else {
     print('Введіть корректне число.');
   }
 }

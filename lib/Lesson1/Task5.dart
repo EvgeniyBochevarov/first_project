@@ -1,37 +1,57 @@
 import 'dart:io';
 
 void main() {
-  print('Калькулятор');
-  print('Введіть перше число: ');
-  double? shislo1 = double.tryParse(stdin.readLineSync()!);
+  double? number1;
+  double? number2;
 
-  print('Введіть друге число: ');
-  double? shislo2 = double.tryParse(stdin.readLineSync()!);
-  print('Оберіть операцію (+, -, *, /)');
-  String? oper = stdin.readLineSync()!;
-  if (shislo1 != null || shislo2 != null) {
-    switch (oper) {
-      case '+':
-        print(
-            'Результат: $shislo1 $oper $shislo2 = ${add(shislo1!, shislo2!)}');
-        break;
-      case '-':
-        print('Результат: $shislo1 $oper $shislo2 = ${subtract(
-            shislo1!, shislo2!)}');
-        break;
-      case '*':
-        print('Результат: $shislo1 $oper $shislo2 = ${multiply(
-            shislo1!, shislo2!)}');
-        break;
-      case '/':
-        print('Результат: $shislo1 $oper $shislo2 = ${divide(
-            shislo1!, shislo2!)}');
-        break;
-      default:
-        print('Невірна операція. Спробуйте знову.');
+  print('Калькулятор');
+
+  while (number1 == null) {
+    print('Введіть перше число: ');
+    String? input = stdin.readLineSync();
+
+    number1 = double.tryParse(input!);
+
+    if (number1 == null) {
+      print('Введено не коректне число. Введіть ще раз');
     }
   }
 
+  while (number2 == null) {
+    print('Введіть друге число: ');
+    String? input = stdin.readLineSync();
+
+    number2 = double.tryParse(input!);
+
+    if (number2 == null) {
+      print('Введено не коректне число. Введіть ще раз');
+    }
+  }
+
+  print('Оберіть операцію (+, -, *, /)');
+  String? oper = stdin.readLineSync()!;
+  switch (oper) {
+    case '+':
+      print('Результат: $number1 $oper $number2 = ${add(number1!, number2!)}');
+      break;
+    case '-':
+      print(
+        'Результат: $number1 $oper $number2 = ${subtract(number1!, number2!)}',
+      );
+      break;
+    case '*':
+      print(
+        'Результат: $number1 $oper $number2 = ${multiply(number1!, number2!)}',
+      );
+      break;
+    case '/':
+      print(
+        'Результат: $number1 $oper $number2 = ${divide(number1!, number2!)}',
+      );
+      break;
+    default:
+      print('Невірна операція. Спробуйте знову.');
+  }
 }
 
 double add(double ch1, double ch2) {
